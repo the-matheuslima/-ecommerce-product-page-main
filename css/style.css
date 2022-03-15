@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kumbh Sans';
+    text-decoration: none;
+    object-fit: cover;
+    border: none;
+}
+
+:root{
+    --Orange: hsl(26, 100%, 55%);
+    --Pale-orange: hsl(25, 100%, 94%);
+    --Very-vark-blue: hsl(220, 13%, 13%);
+    --Dark-grayish-blue: hsl(219, 9%, 45%);
+    --Grayish-blue: hsl(220, 14%, 75%);
+    --Light-grayish-blue: hsl(223, 64%, 98%);
+    --White: hsl(0, 0%, 100%);
+    --Black-with-75-opacity-for-lightbox-background: hsl(0, 0%, 0%);
+}
+
+img{
+    border-radius: 20px;
+}
+
+.container {
+    margin: 0 94px;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border-bottom: 3px solid var(--Light-grayish-blue);
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.nav-ul{
+    display: flex;
+    gap: 20px;
+}
+
+.nav-ul li{
+    text-decoration: none;
+    list-style: none;
+}
+
+.nav-ul li a{
+    color: var(--Dark-grayish-blue);
+}
+.nav-ul li a:hover{
+    border-bottom: 3px solid var(--Orange);
+    padding-bottom: 29px;
+}
+
+.profile{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+}
+
+.amount-cart{
+    display: none;
+    position: relative;
+    background-color: var(--Orange);
+    top: 8px;
+    left: 12px;
+    border-radius: 5px;
+    font-size: 10px;
+    padding: 2px 8px;
+}
+
+.cart{
+    border-radius: unset;
+}
+
+
+
+.avatar{
+    height: 30px;
+}
+
+#product{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-items: center;
+    margin: 66px 0 0 0;
+}
+
+.gallery-product{
+    max-width: 1000px;
+    position: relative;
+    margin-bottom: 26px;
+}
+
+.gallery-product img {
+    height: 395px;
+}
+
+.gallery-thumbnail{
+    display: flex;
+    gap: 25px;
+    height: 99px;
+}
+
+.gallery-thumbnail img{
+    width: 80px;
+}
+
+.name-company {
+    font-size: 1rem;
+    color: var(--Orange);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 32px 0 23px 0;
+}
+
+.name-product{
+font-size: 3rem;
+color: var(--Very-vark-blue);
+margin-bottom: 2rem;
+}
+
+.description-product{
+    width: 26rem;
+    line-height: 24px;
+    margin-bottom: 1rem;
+    color: var(--Dark-grayish-blue);
+}
+
+.price{
+    font-weight: bolder;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.offer{
+    font-size: 1rem;
+    background-color: var(--Pale-orange);
+    color: var(--Orange);
+}
+
+.old-price{
+    font-weight: bolder;
+    font-size: 1.2rem !important;
+    color: var(--Dark-grayish-blue);
+    text-decoration: line-through;
+    margin-bottom: 30px;
+}
+
+.row{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.quantity-cart{
+    display: flex;
+    align-items: center;
+}
+
+.min-plus{
+    align-items: center;
+    background-color: var(--Light-grayish-blue);
+    padding: 20px 30px;
+    cursor: pointer;
+}
+
+#plus{
+    border-radius: 0 10px 10px 0;
+}
+
+#minus{
+    border-radius: 10px 0 0 10px;
+}
+
+.amount-btn{
+    background-color: var(--Light-grayish-blue);
+    padding: 18.6px;
+}
+
+.bg-color{
+    background-color: var(--Orange);
+    color: var(--White);
+    padding: 20px 60px;
+    border-radius: 10px;
+}
+
+.card{
+    display: none;
+    position: absolute;
+    top: 10vh;
+    left: 65vw;
+    padding: 20px;
+    background-color:  var(--Light-grayish-blue);
+    border-radius: 10px;
+}
+
+.card.open{
+    display: block;
+}
+
+.card-able{
+    display: none;
+}
+
+.flex-card{
+    display: flex;
+    gap: 6px;
+}
+
+.cart-text{
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--Grayish-blue);
+    padding-bottom: 20px;
+    font-weight: bold;
+
+}
+
+.product-cart{
+    width: 50px;
+}
+
+.info-card{
+    margin-bottom: 30px;
+}
+
+.Checkout{
+    padding: 20px 100px;
+}
+
+.empty{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 267px;
+    height: 88px;
+}
+
+#delete{
+    border-radius: unset;
+    margin-left: 50px;
+}
