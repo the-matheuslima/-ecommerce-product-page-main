@@ -11,13 +11,6 @@ const cart = document.querySelector('.cart')
 const card = document.querySelector('.card') 
 var counter = 0
 
-
-cart.addEventListener('click', cardOpen)
-addCart.addEventListener('click', addToCart);
-plus.addEventListener('click', calcPlus)
-minus.addEventListener('click', calcMinus)
-remove.addEventListener('click', removeCard)
-
 function cardOpen(){
     card.classList.toggle('open')
 }
@@ -28,12 +21,9 @@ function calcPlus(){
 }
 
 function calcMinus(){
-    counter--
-    if(counter >= 0){
+    if(counter > 0){
+        counter--
         amount[2].textContent = counter
-        checkEmpyt()
-    } else{
-        return
     }
 }
 
@@ -46,7 +36,12 @@ function addCounterInAll(){
 
 function calcPrice(){
     let price = 125.00
-    resulte.textContent = `$${counter * price}.00`
+    let total = price * counter
+    if(total > 0){
+        resulte.textContent = `$${total}.00`
+    } else {
+        checkEmpyt()
+    }
 }
 
 function checkEmpyt(){
@@ -70,30 +65,8 @@ function removeCard(){
     checkEmpyt()
 }
 
-var slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-    showSlides(slideIndex += n);
-  }
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  var i;
-
-  const slides = document.querySelectorAll(".slides");
-const thumbnails = document.querySelectorAll(".thumbnail");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-  }
-  for (i = 0; i < thumbnails.length; i++) {
-    thumbnails[i].className = thumbnails[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  thumbnails[slideIndex-1].className += " active";
-}
+cart.addEventListener('click', cardOpen)
+addCart.addEventListener('click', addToCart);
+plus.addEventListener('click', calcPlus)
+minus.addEventListener('click', calcMinus)
+remove.addEventListener('click', removeCard)

@@ -14,6 +14,9 @@
   <header>
     <div class="menu container">
       <nav class="navbar">
+
+        <img src="images/icon-menu.svg" class="hamburguer" style="border-radius: unset;" alt="">
+        
         <a class="nav-logo">
           <img src="images/logo.svg" style="border-radius: unset;" class="logo" alt="logo">
         </a>
@@ -28,43 +31,40 @@
 
       <div class="profile">
         <div class="cart-profile">
-          <div class="amount-cart amount"></div>
           <img src="images/icon-cart.svg" class="cart" alt="cart">
+          <div class="amount-cart amount"></div>
         </div>
         <div>
           <img src="images/image-avatar.png" class="avatar" alt="avatar">
         </div>
-      </div>
 
-      <div class="card">
-        <div class="cart-text">
-          <p>Cart</p>
-        </div>
-
-        <div id="empty">
-          <div class="empty">
-            <p>Your cart is empty</p>
+        <div class="card">
+          <div class="cart-text">
+            <p>Cart</p>
           </div>
-        </div> 
-
-        <div class="card-able">
-            <div class="flex-card">
-              <div>
-                <img src="images/image-product-1-thumbnail.jpg" class="product-cart" alt="">
-              </div>
-              <div class="info-card">
-                <p>Fall Limited Edition Sneakers</p>
-                <p>
-                  $125.00 X <span class="amount"></span> <span id="resulte"></span>
-
-                  <img src="images/icon-delete.svg" id="delete" alt="">
-                </p>
-                
-              </div>
+    
+          <div id="empty">
+            <div class="empty">
+              <p>Your cart is empty</p>
             </div>
-
-            <button class="bg-color Checkout">Checkout</button>
           </div> 
+          <div class="card-able">
+              <div class="flex-card">
+                <div>
+                  <img src="images/image-product-1-thumbnail.jpg" class="product-cart" alt="">
+                </div>
+                <div class="info-card">
+                  <p>Fall Limited Edition Sneakers</p>
+                  <p>
+                    $125.00 X <span class="amount"></span> <span id="resulte"></span>
+    
+                    <img src="images/icon-delete.svg" id="delete" alt="">
+                  </p>
+                </div>
+              </div>
+              <button class="bg-color Checkout">Checkout</button>
+            </div> 
+        </div>
       </div>
     </div>
   </header>
@@ -75,20 +75,23 @@
         <div class="gallery">
           <div class="gallery-product slideshow">
             <div  class="slides fade">
-              <img src="images/image-product-1.jpg" alt="product">
+              <img src="images/image-product-1.jpg" alt="tennis shoes with beige and white tones">
             </div>
             <div  class="slides fade">
-              <img src="images/image-product-2.jpg" alt="product">
+              <img src="images/image-product-2.jpg" alt="tennis shoes with beige and white tones">
             </div>
             <div  class="slides fade">
-              <img src="images/image-product-3.jpg" alt="product">
+              <img src="images/image-product-3.jpg" alt="tennis shoes with beige and white tones">
             </div>
             <div  class="slides fade">
-              <img src="images/image-product-4.jpg" alt="product">
+              <img src="images/image-product-4.jpg" alt="tennis shoes with beige and white tones">
+              
             </div> 
 
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <div class="prev-next">
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
           </div>
 
           <div class="gallery-thumbnail">
@@ -126,19 +129,14 @@
               <p class="amount amount-btn">0</p>
               <button class="min-plus" id="plus"><img src="images/icon-plus.svg" alt=""></button>
             </div>
-            <button type="submit" class="addCart bg-color">Add to cart</button>
+            <button type="submit" class="addCart bg-color"> <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z" fill="#fff" fill-rule="nonzero"/></svg> Add to cart</button>
           </div>
         </div>
       </div>
-
-      <p id="oa"></p>
     </section>
   </main>
-
-  <!-- <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div> -->
   <script src="js/script.js"></script>
+  <script src="js/slides.js"></script>
+  <script src="js/hamburger.js"></script>
 </body>
 </html>
