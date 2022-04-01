@@ -83,6 +83,7 @@ img{
     border-radius: 5px;
     font-size: 10px;
     padding: 2px 8px;
+    margin-left: 10px;
 }
 
 .cart{
@@ -115,8 +116,8 @@ img{
     margin-bottom: 8px;
 }
 
-.gallery-product img {
-    max-height: 395px;
+.gallery-product img{
+    max-width: 395px;
 }
 
 .gallery-thumbnail{
@@ -216,6 +217,10 @@ margin-bottom: 2rem;
     width: 62%;
 }
 
+.addCart svg{
+    margin-right: 10px;
+}
+
 .card{
     display: none;
     position: absolute;
@@ -267,6 +272,7 @@ margin-bottom: 2rem;
 }
 
 #delete{
+    cursor: pointer;
     border-radius: unset;
     margin-left: 50px;
 }
@@ -323,13 +329,13 @@ margin-bottom: 2rem;
 
     .hamburguer{
         display: block;
-        z-index: 100;
+        z-index: 1000;
     }
 
     .nav-ul{
         position: fixed;
         left: -100%;
-        z-index: 10;
+        z-index: 100;
         flex-direction: column;
         width: 300px;
         height: 100vh;
@@ -346,5 +352,10 @@ margin-bottom: 2rem;
 
     .prev-next {
         display: block !important;
+    }
+
+    .nav-ul li a:hover{
+        border: none;
+        padding: 0;
     }
 }
